@@ -1,9 +1,26 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Ссылки</title>
+        <title>Введи пароль!!!</title>
     </html>
     <body>
-        <a href="page2.html">Star Platinum</a>
+        <script>
+            function checkPassword() {
+                var elem = document.getElementById('passwordbox');
+                var password = elem.value;
+                if (password == 'Kakish') {
+                    return true;
+                } else {
+                    alert('Неправильно аххахахахх');
+                    return false;
+                }
+            }
+        </script>
+     <p>Введи пароль чтобы войти:</p>
+     <p><input id="passwordbox" type="password"></p> 
+     <p><a href="https://www.youtube.com/" onclick="return checkPassword();">ДоБрО ПоЖаЛоВатЬ</a><p>
+
+            
+        
     </body>
-</html>page2.html
+</html>
