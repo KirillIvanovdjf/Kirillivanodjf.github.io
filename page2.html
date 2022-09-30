@@ -1,9 +1,40 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Ссылки</title>
-    </html>
-    <body>
-        <a href="page1.html">Star Platinum</a>
-    </body>
+
+<head>
+    <title>Список дел</title>
+    <style>
+        .GG {
+            font-size: 40px;
+        }
+
+        input[type="button"] {
+            background-color: blueviolet;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function addItem() {
+            var elem = document.getElementById("list");
+            var nem = document.createElement("p");
+            var ponElem = document.getElementById("pon");
+            nem.innerHTML = ponElem.value;
+            nem.onclick = removeItem;
+            elem.appendChild(nem);
+
+        }
+        function removeItem() {
+            var elem = document.getElementById("list");
+            elem.removeChild(this);
+        }
+    </script>
+    <p class="GG">Список дел</p>
+    <p><input id="pon" value="Введите задачу сюды"></p>
+    <p><input type="button" value="Добавить задачу" onclick="addItem();"></p>
+    <p id="list">Изучить Java script</p>
+</body>
+
 </html>
